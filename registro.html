@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <div class="container">
+        <form class="row g-3 mt-3">
+            <div class="col-6">
+                <label for="nombreInput" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombreInput" placeholder="Escriba su nombre">
+
+            </div>
+            <div class="col-6">
+                <label for="apellidoInput" class="form-label">Apellido:</label>
+                <input type="text" class="form-control" id="apellidoInput" placeholder="Escriba su apellido">
+
+            </div>
+            <div class="col-12">
+                <label for="fechaInput" class="form-label">Fecha de nacimiento:</label>
+                <input type="date" class="form-control" id="fechaInput" placeholder="Digite su fecha de nacimiento">
+
+            </div>
+            <div class="col-12">
+                <label for="emailInput" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="Escriba su correo">
+
+            </div>
+            <div class="col-6">
+                <label for="nombreInput" class="form-label">Usuario:</label>
+                <input type="text" class="form-control" id="usuarioInput" placeholder="Escriba su usuario" onkeypress="return Especiales(event);" required>
+                (No se permiten caracteres especiales)
+
+            </div>
+            <div class="col-6">
+                <label for="nombreInput" class="form-label">Validar usuario:</label>
+                <input type="text" class="form-control" id="validarusuInput" placeholder="Confirme su usuario" onkeypress="return Especiales(event);" required>
+
+            </div>
+            <div class="col-6">
+                <label for="contraInput" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="contraInput" placeholder="Ingrese su contraseña">
+
+            </div>
+            <div class="col-6">
+                <label for="validarcontraInput" class="form-label">Confirmar contraseña</label>
+                <input type="password" class="form-control" id="validarcontraInput" placeholder="Confirme su contraseña">
+
+            </div>
+            <div class="col-6">
+                <label for="enfermedades" class="form-label">¿Ha sufrido enfermedades?</label>
+                <input type="radio" name="habilitar" value="si" id="habilitarSi"> Si 
+                <input type="radio" name="habilitar" value="no" id="habilitarNo"> No <br>
+                <label for="cual">Cuales?</label>
+                <input type="text" id="enfermedades" disabled>
+            </div>
+
+            <div class="col-6">
+            <button type="submit" id="login" class="btn btn-dark" onclick="validarUsuario()">Guardar</button>
+            <button type="submit" class="btn btn-light"><a href="index.html">Inicio</a></button>
+
+            </div>
+
+            
+        </form>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
